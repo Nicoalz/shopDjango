@@ -1,0 +1,28 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    {% tailwind_css %}
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+    <secton class="mx-auto container flex flex-col items-center">
+      <h1 class="font-bold text-3xl mb-10">Shop</h1>
+      <div class="w-full flex justify-evenly">
+        <a href="/categories" 
+        class="flex justify-center items-center p-5 bg-gray-500 text-white w-32 h-32 rounded-lg hover:bg-gray-600">
+          Categories
+        </a>
+        <a
+        href="/products" 
+        class="flex justify-center items-center p-5 bg-gray-500 text-white w-32 h-32 rounded-lg hover:bg-gray-600">
+          Products
+        </a>
+      </div>
+  </section>
+  </body>
+</html>

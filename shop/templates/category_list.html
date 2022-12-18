@@ -1,0 +1,30 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    {% tailwind_css %}
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+    <secton class="mx-auto container flex flex-col items-center">
+      <a 
+      href="/category/create"
+      class="bg-blue-500 text-white p-2 rounded-lg my-10">Create new category</a>
+        
+    <div class="w-full flex justify-evenly items-center">
+      {% for category in categories %}
+      <a 
+        href="/category/{{ category.id }}"
+        class="flex justify-center items-center p-5 bg-gray-500 text-white w-48 h-48 rounded-lg hover:bg-gray-600">
+        <p>{{ category.name }}</p>
+      </a>
+      {% endfor %}
+
+    </div>
+  </section>
+  </body>
+</html>
